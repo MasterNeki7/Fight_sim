@@ -1,25 +1,35 @@
-﻿string name;
+﻿Random generator = new Random();
 
-string name2;
+int hitChance = generator.Next(100);
 
-Console.WriteLine("welcome fighter. What is your name (you can't say cum)");
-name = Console.ReadLine();
+string nameOne;
 
-if (name == "cum")
+string nameTwo;
+
+int p1Hp = 10;
+
+int p2Hp = 10;
+
+
+
+
+Console.WriteLine("Welcome fighter. What is your name?");
+
+nameOne = Console.ReadLine();
+
+Console.WriteLine($"Welcome {nameOne}. What is your enemy called?");
+
+nameTwo = Console.ReadLine();
+
+Console.WriteLine($"Alright. {nameOne} is fighting {nameTwo}. BEGIN!");
+
+while (p1Hp > 0 || p2Hp > 0)
 {
- Console.WriteLine("No! you can't have that");
-}
-
-else
-{
-    Console.WriteLine($"Welcome {name}");
-    Console.WriteLine("What is your opponents name? (You can't say cum)");
-    name2 = Console.ReadLine();
     
-    if (name2 == "hitler")
-    {
-        Console.WriteLine("You are stupid and stop please");
-    }
 }
+
+
+
+
 
 Console.ReadLine();
