@@ -40,21 +40,21 @@ while (p1Hp > 0 && p2Hp > 0)
 
     Random generator = new Random();
 
-    int hitChance = generator.Next(100);
+    int hitChance = generator.Next(1000);
 
     Console.ReadLine();
-    
+
     if (hitChance > 50)
 
     {
         p2Hp -= 1;
-        Console.WriteLine("Hit!");
-        
+        Console.WriteLine("P1 hits P2");
+
     }
     else
     {
-        Console.WriteLine("Miss!");
-        
+        Console.WriteLine("P1 misses P2");
+
     }
 
     Console.ReadLine();
@@ -64,31 +64,33 @@ while (p1Hp > 0 && p2Hp > 0)
     if (hitChance > 50)
     {
         p1Hp -= 1;
-        Console.WriteLine("Hit!");
-        
+        Console.WriteLine("P2 hits P1");
+
 
     }
     else
     {
-        Console.WriteLine("Miss");
-       
-    }
+        Console.WriteLine("P2 misses");
 
-    
-    
+    }
+    Console.ReadLine();
+}
+
+if (p1Hp <= 0 && p2Hp <= 0)
+{
+    Console.WriteLine("BOTH LOST");
+}
+
+else if (p1Hp <= 0)
+{
+    Console.WriteLine($"{nameTwo} Won!");
 
 }
 
-if (p1Hp < 0)
-    {
-        Console.WriteLine($"{nameTwo} Won!");
+else if (p2Hp <= 0)
+{
+    Console.WriteLine($"{nameOne} Won!");
+}
 
-    }
-
-if (p2Hp < 0)
-    {
-        Console.WriteLine($"{nameOne} Won!");
-    }
-
-
+Thread.Sleep(5000);
 Console.ReadLine();
